@@ -1,24 +1,24 @@
 
 # Task Management Application
 
-A simple task management application built with Django, designed to help users manage and track their tasks efficiently. This project includes a backend API using Django REST Framework to perform CRUD operations on tasks, with an admin interface to manage them.
+A comprehensive task management application developed with Django, intended to help users efficiently manage and track their tasks. This project provides a backend API using Django REST Framework for CRUD operations on tasks, with a dedicated admin interface for management.
 
 ## Features
 
-- **Task Creation**: Create new tasks with a title, description, and due date.
-- **Task Update**: Update task details including title, description, and status (completed or not).
-- **Task Deletion**: Remove tasks when no longer needed.
-- **Task Listing**: View all tasks in a list format through the API or Django admin interface.
-- **Django Admin Interface**: Admin interface for managing tasks.
-- **API Endpoints**: Built with Django REST Framework to allow interaction with tasks programmatically.
+- **Task Creation**: Users can create tasks with a title, description, due date, and priority level.
+- **Task Update**: Allows updating of task details, including title, description, due date, completion status, and priority.
+- **Task Deletion**: Remove tasks that are no longer needed.
+- **Task Listing**: View all tasks, with support for filtering and sorting by priority and due date.
+- **Django Admin Interface**: Admins have access to manage tasks through a user-friendly interface.
+- **API Endpoints**: Built using Django REST Framework to facilitate programmatic interaction with tasks.
 
 ## Technologies Used
 
-- **Backend**: Django
+- **Backend**: Django 5.1.3
 - **API Framework**: Django REST Framework
-- **Database**: SQLite (default for Django, can be configured to use PostgreSQL or MySQL)
+- **Database**: SQLite (configurable to PostgreSQL or MySQL)
 - **Admin Interface**: Django Admin
-- **Python**: Python 3.x
+- **Python Version**: Python 3.12.6
 
 ## Project Structure
 
@@ -43,14 +43,14 @@ task_manager/
 
 ## Getting Started
 
-Follow the steps below to set up the project on your local machine:
+Follow these steps to set up the project on your local machine:
 
 ### Prerequisites
 
-- Python 3.x
-- Django 5.1.x
+- Python 3.12.6
+- Django 5.1.3
 - Django REST Framework
-- SQLite (or other database options)
+- SQLite (or an alternative database)
 
 ### Installation
 
@@ -68,7 +68,7 @@ Follow the steps below to set up the project on your local machine:
 3. **Activate the virtual environment:**
    - On Windows:
      ```bash
-     venv\Scripts\activate
+     venv\Scriptsctivate
      ```
    - On macOS/Linux:
      ```bash
@@ -96,7 +96,7 @@ Follow the steps below to set up the project on your local machine:
    ```
 
 8. **Access the app in your browser:**
-   Open your browser and go to `http://127.0.0.1:8000` to access the task management API. To access the Django admin interface, go to `http://127.0.0.1:8000/admin` and log in with the superuser credentials.
+   Open your browser and go to `http://127.0.0.1:8000` to access the task management API. For the Django admin interface, go to `http://127.0.0.1:8000/admin` and log in with the superuser credentials.
 
 ### API Endpoints
 
@@ -108,7 +108,7 @@ Follow the steps below to set up the project on your local machine:
 
 ## Contributing
 
-Feel free to fork this repository, contribute improvements, and submit pull requests. All contributions are welcome!
+Feel free to fork this repository, make improvements, and submit pull requests. Contributions are welcome!
 
 ## License
 
