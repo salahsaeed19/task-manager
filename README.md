@@ -38,7 +38,10 @@ task_manager/
 │   ├── serializers.py
 │   ├── views.py
 │   └── migrations/
-└── db.sqlite3
+├── db.sqlite3
+├── venv
+├── manage.py
+├── README.md
 ```
 
 ## Getting Started
