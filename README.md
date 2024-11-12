@@ -116,4 +116,4 @@ Feel free to fork this repository, make improvements, and submit pull requests. 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/salahsaeed19/task-manager/blob/main/LICENSE.txt) file for details.
