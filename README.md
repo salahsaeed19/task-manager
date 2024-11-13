@@ -5,13 +5,13 @@ A task management application built with Django, enhanced with a range of featur
 
 ## Features
 
-- **Task Creation**: Users can create tasks with a title, description, priority level, and due date.
-- **Task Assignment**: Tasks can be assigned to specific users.
-- **Status Management**: Update the status of tasks, such as marking them as "In Progress" or "Completed".
-- **Priority Levels**: Set different priority levels to manage task urgency.
-- **Due Date Reminders**: Configure reminders for due dates to help users stay on track.
-- **Task Filtering**: Filter tasks by status, priority, or assigned user.
-- **API Endpoints**: Django REST Framework provides easy interaction with tasks programmatically.
+- **Task Creation**: Create new tasks with a title, description, and due date.
+- **Task Update**: Update task details, including title, description, and status (completed or not).
+- **Task Deletion**: Remove tasks when no longer needed.
+- **Task Listing**: View all tasks in a list format through the API or Django admin interface.
+- **Task Comments**: Add, view, and manage comments on each task, with user attribution for each comment.
+- **Django Admin Interface**: Admin interface for managing tasks and comments.
+- **API Endpoints**: Built with Django REST Framework for interacting with tasks and comments programmatically.
 
 ## Technologies Used
 
@@ -104,11 +104,19 @@ Follow these steps to set up the project on your local machine:
 
 ### API Endpoints
 
-- `GET /api/tasks/`: List all tasks.
-- `POST /api/tasks/`: Create a new task.
-- `GET /api/tasks/{id}/`: Get details of a specific task.
-- `PUT /api/tasks/{id}/`: Update an existing task.
-- `DELETE /api/tasks/{id}/`: Delete a task.
+- **Tasks**
+  - `GET /api/tasks/`: List all tasks.
+  - `POST /api/tasks/`: Create a new task.
+  - `GET /api/tasks/{id}/`: Get details of a specific task.
+  - `PUT /api/tasks/{id}/`: Update an existing task.
+  - `DELETE /api/tasks/{id}/`: Delete a task.
+
+- **Comments**
+  - `GET /api/comments/`: List all comments.
+  - `POST /api/comments/`: Create a new comment for a task.
+  - `GET /api/comments/{id}/`: Get details of a specific comment.
+  - `PUT /api/comments/{id}/`: Update an existing comment.
+  - `DELETE /api/comments/{id}/`: Delete a comment.
 
 ## Contributing
 
