@@ -2,6 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.mail import send_mail
 
+PRIORITY_CHOICES = [
+    ('L', 'Low'),
+    ('M', 'Medium'),
+    ('H', 'High'),
+]
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -18,7 +24,13 @@ class Task(models.Model):
     due_date = models.DateTimeField(null=True, blank=True)
     user = models.ForeignKey(User, related_name='tasks', on_delete=models.CASCADE)
     category = models.ForeignKey(Category, related_name='tasks', on_delete=models.SET_NULL, null=True)
-
+    priority = models.CharField(
+        max_length=1,
+        choices=PRIORITY_CHOICES,
+        default='M',
+        help_text="Task priority (Low, Medium, High)"
+    )
+    
     def save(self, *args, **kwargs):
         if not self.pk:
             send_mail(
