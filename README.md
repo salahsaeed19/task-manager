@@ -12,6 +12,9 @@ A task management application built with Django, enhanced with a range of featur
 - **Task Comments**: Add, view, and manage comments on each task, with user attribution for each comment.
 - **Django Admin Interface**: Admin interface for managing tasks and comments.
 - **API Endpoints**: Built with Django REST Framework for interacting with tasks and comments programmatically.
+- **Task Filtering and Sorting**:
+  - Filter tasks by priority, completion status, or category.
+  - Sort tasks by priority, due date, or title.
 
 ## Technologies Used
 
