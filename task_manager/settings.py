@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'tasks',
     'django_filters',
-
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +135,15 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'salahsaef40@gmail.com'
 EMAIL_HOST_PASSWORD = 'your-email-password'
+
+
+ASGI_APPLICATION = 'task_manager.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('127.0.0.1', 6379)],
+        },
+    },
+}

@@ -32,15 +32,20 @@ class Task(models.Model):
     )
     
     def save(self, *args, **kwargs):
-        if not self.pk:
-            send_mail(
-                subject=f'New Task Assigned: {self.title}',
-                message=f'Hello {self.user.username},\n\nYou have a new task assigned to you: "{self.title}".\n\nDescription: {self.description}\n\nDue Date: {self.due_date}\n\nThank you.',
-                from_email='your-email@example.com',
-                recipient_list=[self.user.email],
-                fail_silently=False,
-            )
         super().save(*args, **kwargs)
+        channel_layer = get_channel_layer()
+
+        async_to_sync(channel_layer.group_send)(
+            "task_notifications",
+            {
+                "type": "send_notification",
+                "message": {
+                    "title": self.title,
+                    "completed": self.completed,
+                    "action": "updated"
+                }
+            }
+        )
 
     def __str__(self):
         return self.title
