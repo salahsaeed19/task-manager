@@ -1,20 +1,38 @@
 
 # Task Management Application
 
-A task management application built with Django, enhanced with a range of features for efficient tracking and handling of tasks. This project includes a backend API using Django REST Framework, allowing users to perform CRUD operations on tasks with features like user assignments, priority settings, and due date reminders.
+TaskHub is a powerful task management system designed to simplify project management and team collaboration. The application offers advanced features like real-time notifications, task priority support, filtering, sorting, and more.
+
+---
 
 ## Features
 
-- **Task Creation**: Create new tasks with a title, description, and due date.
-- **Task Update**: Update task details, including title, description, and status (completed or not).
-- **Task Deletion**: Remove tasks when no longer needed.
-- **Task Listing**: View all tasks in a list format through the API or Django admin interface.
-- **Task Comments**: Add, view, and manage comments on each task, with user attribution for each comment.
-- **Django Admin Interface**: Admin interface for managing tasks and comments.
-- **API Endpoints**: Built with Django REST Framework for interacting with tasks and comments programmatically.
-- **Task Filtering and Sorting**:
-  - Filter tasks by priority, completion status, or category.
-  - Sort tasks by priority, due date, or title.
+### 1. **Task Management**
+- Create, update, and delete tasks.
+- Assign tasks to specific users.
+- Add categories to organize tasks.
+
+### 2. **Task Prioritization**
+- Assign priority levels to tasks (e.g., High, Medium, Low).
+- Sort tasks based on their priority.
+
+### 3. **Filtering and Sorting**
+- Filter tasks by user, category, or priority.
+- Sort tasks by due date, creation date, or priority.
+
+### 4. **Real-Time Notifications**
+- Instant notifications for task updates using WebSockets.
+- Stay updated with real-time task assignments, completions, and status changes.
+
+### 5. **RESTful API**
+- A robust API to integrate with third-party applications.
+- API endpoints for task creation, updates, and retrieval.
+
+### 6. **User Authentication**
+- Secure login and registration.
+- Role-based access control.
+
+---
 
 ## Technologies Used
 
