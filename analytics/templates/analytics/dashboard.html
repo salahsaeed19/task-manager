@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskHub Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>TaskHub Dashboard</h1>
+    <div>
+        <h2>General Statistics</h2>
+        <p>Total Tasks: {{ total_tasks }}</p>
+        <p>Completed Tasks: {{ completed_tasks }}</p>
+        <p>Pending Tasks: {{ pending_tasks }}</p>
+        <p>Completion Rate: {{ completion_rate }}%</p>
+    </div>
+
+    <div>
+        <h2>Priority Distribution</h2>
+        <canvas id="priorityChart" width="400" height="200"></canvas>
+    </div>
+
+    <script>
+        const priorityData = {{ priority_distribution|safe }};
+        
+        const labels = priorityData.map(item => item.priority || 'Uncategorized');
+        const data = priorityData.map(item => item.count);
+
+        const ctx = document.getElementById('priorityChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Priority Distribution',
+                    data: data,
+                    backgroundColor: ['#ff6384', '#36a2eb', '#ffce56'],
+                }],
+            },
+        });
+    </script>
+</body>
+</html>

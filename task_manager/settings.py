@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'tasks',
     'django_filters',
     'channels',
+    'analytics',
 ]
 
 MIDDLEWARE = [
