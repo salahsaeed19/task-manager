@@ -20,7 +20,7 @@
             <td>{{ task.title }}</td>
             <td>{{ task.description }}</td>
             <td>{{ task.priority }}</td>
-            <td>{{ task.due_date }}</td>
+            <td>{{ task.due_date|date:"F d, Y" }}</td>
             <td>
                 <a href="{% url 'tasks:task_detail' task.id %}">View</a>
                 <a href="{% url 'tasks:task_edit' task.id %}">Edit</a>
