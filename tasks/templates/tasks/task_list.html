@@ -22,6 +22,9 @@
             <td>{{ task.priority }}</td>
             <td>{{ task.due_date|date:"F d, Y" }}</td>
             <td>
+                <a href="{% url 'tasks:mark_complete' task.id %}">Mark as Complete</a>
+            </td>   
+            <td>
                 <a href="{% url 'tasks:task_detail' task.id %}">View</a>
                 <a href="{% url 'tasks:task_edit' task.id %}">Edit</a>
                 <a href="{% url 'tasks:task_delete' task.id %}">Delete</a>
