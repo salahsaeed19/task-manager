@@ -132,6 +132,7 @@ Follow these steps to set up the project on your local machine:
   - `PUT /api/tasks/{id}/`: Update an existing task.
   - `DELETE /api/tasks/{id}/`: Delete a task.
 
+
 - **Comments**
   - `GET /api/comments/`: List all comments.
   - `POST /api/comments/`: Create a new comment for a task.
