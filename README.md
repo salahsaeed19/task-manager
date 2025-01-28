@@ -38,7 +38,7 @@ TaskHub is a powerful task management system designed to simplify project manage
 
 - **Backend**: Django 5.1.3
 - **API Framework**: Django REST Framework
-- **Database**: SQLite (configurable to PostgreSQL or MySQL)
+- **Database**: SQLite (configurable to PostgreSQL)
 - **Admin Interface**: Django Admin
 - **Python Version**: Python 3.12.6
 
